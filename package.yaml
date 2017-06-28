@@ -1,0 +1,30 @@
+name:                swift
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/mwotton/swift#readme
+license:             BSD3
+author:              Mark Wotton
+maintainer:          mwotton@gmail.com
+copyright:           2017 Mark Wotton
+category:            Web
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - primes
+
+library:
+  source-dirs:      src
+
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs:
+      - test
+    dependencies:
+      - hspec == 2.*
+      - swift
+      - QuickCheck
